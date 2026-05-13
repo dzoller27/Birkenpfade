@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Birkenpfade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #faf7f0; color: #1f2e26; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
+    .text-primary { color: #2d5e2b !important; }
+    .bg-primary { background-color: #2d5e2b !important; }
+    .bg-primary\/10 { background-color: rgba(45, 94, 43, 0.1); }
+    .border-border { border-color: #dad3c2; }
+  </style>
+</head>
+<body>
+
+  <nav class="sticky top-0 z-50 bg-[#faf7f0]/95 backdrop-blur-sm border-b border-[#dad3c2]">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg>
+        <div><span class="font-heading text-xl font-bold text-[#2d5e2b]">Birkenpfade</span><span class="block text-xs text-[#5a6e5c]">Natur – Verbindung – Sein</span></div>
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Startseite</a>
+        <a href="angebote.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Angebote</a>
+        <a href="birkenpfade.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Birkenpfade</a>
+        <a href="ueber-mich.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Über mich</a>
+        <a href="mehrwert-naturzeit.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Mehrwert Naturzeit</a>
+        <a href="termine.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Termine</a>
+        <a href="blog.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Blog</a>
+        <a href="kontakt.html" class="px-3 py-2 text-sm font-medium text-[#2d5e2b] bg-[#2d5e2b]/10 rounded-md">Kontakt</a>
+      </div>
+      <button id="menuBtn" class="lg:hidden p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden bg-[#faf7f0] border-t px-4 py-4 space-y-2">
+      <a href="index.html" class="block px-3 py-2">Startseite</a><a href="angebote.html" class="block px-3 py-2">Angebote</a><a href="birkenpfade.html" class="block px-3 py-2">Birkenpfade</a><a href="ueber-mich.html" class="block px-3 py-2">Über mich</a><a href="mehrwert-naturzeit.html" class="block px-3 py-2">Mehrwert Naturzeit</a><a href="termine.html" class="block px-3 py-2">Termine</a><a href="blog.html" class="block px-3 py-2">Blog</a><a href="kontakt.html" class="block px-3 py-2 text-[#2d5e2b]">Kontakt</a>
+    </div>
+  </nav>
+
+  <main class="py-12 px-4 max-w-5xl mx-auto">
+    <h1 class="font-heading text-4xl md:text-5xl font-bold text-center mb-4">Kontakt</h1>
+    <p class="text-center text-[#5a6e5c] mb-12 max-w-xl mx-auto">Hast du Fragen oder möchtest du einen Termin anfragen? Ich freue mich auf deine Nachricht!</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Contact Info -->
+      <div class="space-y-6">
+        <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-6 space-y-5">
+          <div class="flex items-center gap-4"><div class="w-10 h-10 bg-[#2d5e2b]/10 rounded-full flex items-center justify-center">📞</div><div><p class="text-sm text-[#5a6e5c]">Telefon</p><p class="font-medium">0176 48 98 05 65</p></div></div>
+          <div class="flex items-center gap-4"><div class="w-10 h-10 bg-[#2d5e2b]/10 rounded-full flex items-center justify-center">✉️</div><div><p class="text-sm text-[#5a6e5c]">E-Mail</p><a href="mailto:info@birkenpfade.de" class="font-medium hover:underline">info@birkenpfade.de</a></div></div>
+          <div class="flex items-center gap-4"><div class="w-10 h-10 bg-[#2d5e2b]/10 rounded-full flex items-center justify-center">📍</div><div><p class="text-sm text-[#5a6e5c]">Standort</p><p class="font-medium">Pfälzerwald bei Carlsberg (67316)</p></div></div>
+        </div>
+        <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-6"><h3 class="font-heading text-lg font-semibold mb-3">Anfahrt</h3><p class="text-sm leading-relaxed">Genauen Treffpunkt teile ich dir nach deiner Anmeldung mit. Der Pfälzerwald ist gut mit dem Auto erreichbar. Parkplätze sind vorhanden.</p></div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-6">
+        <form action="mailto:info@birkenpfade.de" method="POST" enctype="text/plain" class="space-y-4">
+          <div><label class="block text-sm font-medium mb-1">Name *</label><input type="text" name="name" required class="w-full px-4 py-2 rounded-md border border-[#dad3c2] bg-white"></div>
+          <div><label class="block text-sm font-medium mb-1">E-Mail *</label><input type="email" name="email" required class="w-full px-4 py-2 rounded-md border border-[#dad3c2] bg-white"></div>
+          <div><label class="block text-sm font-medium mb-1">Telefon</label><input type="tel" name="phone" class="w-full px-4 py-2 rounded-md border border-[#dad3c2] bg-white"></div>
+          <div><label class="block text-sm font-medium mb-1">Betreff *</label><select name="subject" class="w-full px-4 py-2 rounded-md border border-[#dad3c2] bg-white"><option>Allgemeine Anfrage</option><option>Waldbaden</option><option>Naturerlebnis</option><option>Naturcoaching</option><option>Gehör-Gang</option><option>Alltags-Kompass</option><option>Terminanfrage</option></select></div>
+          <div><label class="block text-sm font-medium mb-1">Nachricht *</label><textarea name="message" rows="5" required class="w-full px-4 py-2 rounded-md border border-[#dad3c2] bg-white"></textarea></div>
+          <button type="submit" class="w-full bg-[#2d5e2b] text-white py-2 rounded-md hover:bg-[#264f24] transition">Nachricht senden</button>
+          <p class="text-xs text-[#5a6e5c] text-center mt-3">* Pflichtfelder. Nach dem Absenden öffnet sich Ihr E-Mail-Programm.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#5c5a4e] text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div><div class="flex items-center gap-2 mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg><span class="font-heading text-xl">Birkenpfade</span></div><p class="text-sm opacity-80">Natur – Verbindung – Sein</p></div>
+      <div><h3 class="font-heading text-lg font-semibold mb-4">Kontakt</h3><p>📞 0176 48 98 05 65<br>✉️ info@birkenpfade.de</p></div>
+      <div><h3 class="font-heading text-lg font-semibold mb-4">Rechtliches</h3><p><a href="impressum.html" class="hover:underline">Impressum</a><br><a href="datenschutz.html" class="hover:underline">Datenschutz</a><br><a href="agb.html" class="hover:underline">AGB</a><br><a href="wichtige-hinweise.html" class="hover:underline">Wichtige Hinweise</a></p></div>
+    </div>
+    <div class="text-center text-xs opacity-60 mt-8">© 2026 Birkenpfade – Anne Birkenbeul</div>
+  </footer>
+
+  <script>document.getElementById('menuBtn').onclick = function() { var m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); }</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teilnehmerstimmen | Birkenpfade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #faf7f0; color: #1f2e26; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
+    .text-primary { color: #2d5e2b !important; }
+    .bg-card { background-color: #f5f1e9; }
+    .border-border { border-color: #dad3c2; }
+  </style>
+</head>
+<body>
+
+  <nav class="sticky top-0 z-50 bg-[#faf7f0]/95 backdrop-blur-sm border-b border-[#dad3c2]">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg>
+        <div><span class="font-heading text-xl font-bold text-[#2d5e2b]">Birkenpfade</span><span class="block text-xs text-[#5a6e5c]">Natur – Verbindung – Sein</span></div>
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="index.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Startseite</a>
+        <a href="angebote.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Angebote</a>
+        <a href="birkenpfade.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Birkenpfade</a>
+        <a href="ueber-mich.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Über mich</a>
+        <a href="mehrwert-naturzeit.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Mehrwert Naturzeit</a>
+        <a href="termine.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Termine</a>
+        <a href="blog.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Blog</a>
+        <a href="kontakt.html" class="ml-2 bg-[#2d5e2b] text-white text-sm font-medium px-4 py-2 rounded-md">Jetzt anfragen</a>
+      </div>
+      <button id="menuBtn" class="lg:hidden p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="lg:hidden hidden bg-[#faf7f0] border-t px-4 py-4 space-y-2">
+      <a href="index.html" class="block px-3 py-2">Startseite</a><a href="angebote.html" class="block px-3 py-2">Angebote</a><a href="birkenpfade.html" class="block px-3 py-2">Birkenpfade</a><a href="ueber-mich.html" class="block px-3 py-2">Über mich</a><a href="mehrwert-naturzeit.html" class="block px-3 py-2">Mehrwert Naturzeit</a><a href="termine.html" class="block px-3 py-2">Termine</a><a href="blog.html" class="block px-3 py-2">Blog</a><a href="kontakt.html" class="block mt-2 bg-[#2d5e2b] text-white text-center px-4 py-2 rounded-md">Jetzt anfragen</a>
+    </div>
+  </nav>
+
+  <main class="py-12 px-4 max-w-4xl mx-auto">
+    <h1 class="font-heading text-4xl md:text-5xl font-bold text-center mb-10">Teilnehmerstimmen</h1>
+
+    <div class="space-y-8">
+      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.5" class="mb-4 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="leading-relaxed italic mb-6">„Ich erinnere mich gerne an die Naturerlebnis- und Waldbade-Angebote zurück. Anne verfügt nicht nur über Fachwissen, sondern vermittelt mit ihrem Methodenkoffer passend und wirksam Erlebnisse auf eine besonders sympathische Art und Weise. Ich kann ihre Angebote für Auszeiten, achtsame Momente oder spielerische Walderfahrungen jedem wärmstens empfehlen."</p>
+        <div class="flex items-center gap-3"><div class="flex text-[#2d5e2b]">★★★★★</div><span class="font-semibold">Linda G.</span></div>
+      </div>
+
+      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.5" class="mb-4 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="leading-relaxed italic mb-6">„Das Waldbaden mit Anne Birkenbeul kann ich aus eigener Erfahrung sehr empfehlen. Anne hat mit ihrer ruhigen und naturverbundenen Art einen geschützten Rahmen geschaffen. Nach dem Waldbaden fühlte ich mich innerlich ruhig und geerdet. Es war wie ein tiefes Durchatmen für Körper und Seele."</p>
+        <div class="flex items-center gap-3"><div class="flex text-[#2d5e2b]">★★★★★</div><span class="font-semibold">Christel M.</span></div>
+      </div>
+
+      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.5" class="mb-4 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="leading-relaxed italic mb-6">„Das Waldbaden mit Anne war für mich ein besonderes Ereignis. Für mich war unter vielen verschiedenen Dingen das Kennenlernen des Birkenporlings und auch das Sammeln dieses Baumpilzes unvergesslich. Der Birkenporling gehört seitdem in meine Hausapotheke. Vielen Dank!"</p>
+        <div class="flex items-center gap-3"><div class="flex text-[#2d5e2b]">★★★★★</div><span class="font-semibold">Hildegunde S.</span></div>
+      </div>
+
+      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.5" class="mb-4 opacity-30"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="leading-relaxed italic mb-6">„Durch gezielte Anleitung von Anne versiegte der Gedankenstrom und ich konnte mich bewusst auf das Hier und Jetzt fokussieren. Nun konnte ich die Vielfalt und Schönheit der Natur mit allen Sinnen erleben. Ich empfand die vier Stunden im Wald als entspannende und bereichernde Auszeit."</p>
+        <div class="flex items-center gap-3"><div class="flex text-[#2d5e2b]">★★★★★</div><span class="font-semibold">Eva H.</span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-[#5c5a4e] text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div><div class="flex items-center gap-2 mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg><span class="font-heading text-xl">Birkenpfade</span></div><p class="text-sm opacity-80">Natur – Verbindung – Sein</p></div>
+      <div><h3 class="font-heading text-lg font-semibold mb-4">Kontakt</h3><p>📞 0176 48 98 05 65<br>✉️ info@birkenpfade.de</p></div>
+      <div><h3 class="font-heading text-lg font-semibold mb-4">Rechtliches</h3><p><a href="impressum.html" class="hover:underline">Impressum</a><br><a href="datenschutz.html" class="hover:underline">Datenschutz</a><br><a href="agb.html" class="hover:underline">AGB</a><br><a href="wichtige-hinweise.html" class="hover:underline">Wichtige Hinweise</a></p></div>
+    </div>
+    <div class="text-center text-xs opacity-60 mt-8">© 2026 Birkenpfade – Anne Birkenbeul</div>
+  </footer>
+
+  <script>document.getElementById('menuBtn').onclick = function() { var m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); }</script>
+</body>
+</html>
