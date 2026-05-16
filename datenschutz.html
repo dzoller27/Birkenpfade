@@ -4,78 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutz | Birkenpfade</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background-color: #faf7f0; color: #1f2e26; font-family: 'Inter', sans-serif; }
-    h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
-    .text-primary { color: #2d5e2b !important; }
+    :root {
+      --background: 40 30% 97%;
+      --foreground: 150 20% 15%;
+      --primary: 145 35% 28%;
+      --primary-foreground: 40 30% 97%;
+      --card: 40 25% 95%;
+      --border: 80 15% 82%;
+      --muted: 80 15% 90%;
+      --muted-foreground: 150 10% 40%;
+      --secondary: 30 30% 35%;
+      --secondary-foreground: 40 30% 97%;
+    }
+    
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .bg-background { background-color: hsl(var(--background)); }
+    .bg-card { background-color: hsl(var(--card)); }
+    .bg-primary { background-color: hsl(var(--primary)); }
+    .bg-primary\/10 { background-color: hsl(var(--primary) / 0.1); }
+    .bg-muted { background-color: hsl(var(--muted)); }
+    .bg-secondary { background-color: hsl(var(--secondary)); }
+    .text-primary { color: hsl(var(--primary)); }
+    .text-foreground { color: hsl(var(--foreground)); }
+    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+    .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
+    .border-border { border-color: hsl(var(--border)); }
+    .hover\:bg-primary\/90:hover { background-color: hsl(var(--primary) / 0.9); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .rounded-xl { border-radius: 0.5rem; }
+    .rounded-md { border-radius: calc(0.5rem - 0.25rem); }
   </style>
 </head>
 <body>
 
-  <nav class="sticky top-0 z-50 bg-[#faf7f0]/95 backdrop-blur-sm border-b border-[#dad3c2]">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg>
-        <div><span class="font-heading text-xl font-bold text-[#2d5e2b]">Birkenpfade</span><span class="block text-xs text-[#5a6e5c]">Natur – Verbindung – Sein</span></div>
-      </a>
-      <div class="hidden lg:flex items-center gap-1">
-        <a href="index.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Startseite</a>
-        <a href="angebote.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Angebote</a>
-        <a href="birkenpfade.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Birkenpfade</a>
-        <a href="ueber-mich.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Über mich</a>
-        <a href="mehrwert-naturzeit.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Mehrwert Naturzeit</a>
-        <a href="termine.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Termine</a>
-        <a href="blog.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Blog</a>
-        <a href="kontakt.html" class="ml-2 bg-[#2d5e2b] text-white text-sm font-medium px-4 py-2 rounded-md">Jetzt anfragen</a>
+<nav class="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <i data-lucide="tree-pine" class="w-7 h-7" style="stroke: #2d5e2b; stroke-width: 1.8;"></i>
+      <div>
+        <span class="font-heading text-xl font-bold text-primary">Birkenpfade</span>
+        <span class="block text-xs text-muted-foreground">Natur – Verbindung – Sein</span>
       </div>
-      <button id="menuBtn" class="lg:hidden p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </a>
+    <div class="hidden lg:flex items-center gap-1">
+      <a href="index.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Startseite</a>
+      <a href="angebote.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Angebote</a>
+      <a href="birkenpfade.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Birkenpfade</a>
+      <a href="ueber-mich.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Über mich</a>
+      <a href="mehrwert-naturzeit.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Mehrwert Naturzeit</a>
+      <a href="termine.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Termine</a>
+      <a href="./blog/" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Blog</a>
+      <a href="kontakt.html" class="ml-2 bg-primary text-primary-foreground text-sm font-medium px-4 py-2 rounded-md hover:bg-primary/90">Jetzt anfragen</a>
     </div>
-    <div id="mobileMenu" class="lg:hidden hidden bg-[#faf7f0] border-t px-4 py-4 space-y-2">
-      <a href="index.html" class="block px-3 py-2">Startseite</a><a href="angebote.html" class="block px-3 py-2">Angebote</a><a href="birkenpfade.html" class="block px-3 py-2">Birkenpfade</a><a href="ueber-mich.html" class="block px-3 py-2">Über mich</a><a href="mehrwert-naturzeit.html" class="block px-3 py-2">Mehrwert Naturzeit</a><a href="termine.html" class="block px-3 py-2">Termine</a><a href="blog.html" class="block px-3 py-2">Blog</a><a href="kontakt.html" class="block mt-2 bg-[#2d5e2b] text-white text-center px-4 py-2 rounded-md">Jetzt anfragen</a>
+    <button id="menuBtn" class="lg:hidden p-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden bg-background border-t border-border px-4 py-4 space-y-2">
+    <a href="index.html" class="block px-3 py-2">Startseite</a>
+    <a href="angebote.html" class="block px-3 py-2">Angebote</a>
+    <a href="birkenpfade.html" class="block px-3 py-2">Birkenpfade</a>
+    <a href="ueber-mich.html" class="block px-3 py-2">Über mich</a>
+    <a href="mehrwert-naturzeit.html" class="block px-3 py-2">Mehrwert Naturzeit</a>
+    <a href="termine.html" class="block px-3 py-2">Termine</a>
+    <a href="./blog/" class="block px-3 py-2">Blog</a>
+    <a href="kontakt.html" class="block mt-2 bg-primary text-primary-foreground text-center px-4 py-2 rounded-md">Jetzt anfragen</a>
+  </div>
+</nav>
+
+<main class="py-12 px-4 max-w-3xl mx-auto">
+  <h1 class="font-heading text-3xl font-bold mb-8">Datenschutzerklärung</h1>
+  <p class="mb-6"><strong>Verantwortlicher im Sinne der Datenschutzgesetze:</strong> Anne Birkenbeul, Carlsberg (67316)</p>
+
+  <h2 class="font-heading text-xl font-semibold mt-6 mb-3">1. Allgemeines</h2>
+  <p class="mb-4">Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzerklärung informiert Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie in Bezug auf Ihre Daten haben.</p>
+
+  <h2 class="font-heading text-xl font-semibold mt-6 mb-3">2. Erhebung und Speicherung personenbezogener Daten</h2>
+  <h3 class="font-semibold mt-3 mb-2">a) Daten, die Sie uns aktiv mitteilen:</h3>
+  <ul class="list-disc pl-6 mb-3"><li>Kontaktdaten (Name, E-Mail-Adresse, Telefonnummer, Adresse) bei Anmeldungen, Anfragen oder Buchungen.</li><li>Zahlungsdaten (z. B. Bankverbindung bei Überweisungen).</li><li>Gesundheitsdaten (freiwillige Angaben zu Allergien oder Einschränkungen, soweit für die Teilnahme relevant).</li></ul>
+  <h3 class="font-semibold mt-3 mb-2">b) Automatisch erhobene Daten:</h3>
+  <ul class="list-disc pl-6 mb-3"><li>Technische Daten (IP-Adresse, Browser-Typ, Betriebssystem, Zugriffszeiten) beim Besuch der Website.</li></ul>
+  <h3 class="font-semibold mt-3 mb-2">c) Rechtsgrundlage:</h3>
+  <p class="mb-4">Die Verarbeitung erfolgt auf Basis von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), lit. a DSGVO (Einwilligung) oder lit. f DSGVO (berechtigtes Interesse).</p>
+
+  <h2 class="font-heading text-xl font-semibold mt-6 mb-3">3. Nutzung der Website und Cookies</h2>
+  <p class="mb-4">Wir setzen technisch notwendige Cookies ein. Tracking-Cookies werden nur nach Ihrer Einwilligung verwendet.</p>
+
+  <h2 class="font-heading text-xl font-semibold mt-6 mb-3">4. Zwecke der Datenverarbeitung</h2>
+  <ul class="list-disc pl-6 mb-4"><li>Buchungen und Anmeldungen</li><li>Marketing (nur mit ausdrücklicher Einwilligung)</li><li>Sicherheit</li></ul>
+
+  <h2 class="font-heading text-xl font-semibold mt-6 mb-3">5. Ihre Rechte</h2>
+  <p class="mb-4">Sie haben Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gemäß DSGVO.</p>
+
+  <h2 class="font-heading text-xl font-semibold mt-6 mb-3">6. Datensicherheit</h2>
+  <p class="mb-4">Wir setzen technische und organisatorische Maßnahmen (z. B. SSL-Verschlüsselung) ein, um Ihre Daten zu schützen.</p>
+
+  <p class="text-sm text-muted-foreground mt-8">Stand: Februar 2026</p>
+</main>
+
+<footer class="bg-secondary text-secondary-foreground py-12 px-4">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <i data-lucide="tree-pine" class="w-6 h-6" style="stroke: white; stroke-width: 1.8;"></i>
+        <span class="font-heading text-xl">Birkenpfade</span>
+      </div>
+      <p class="text-sm opacity-80">Natur – Verbindung – Sein</p>
     </div>
-  </nav>
-
-  <main class="py-12 px-4 max-w-3xl mx-auto">
-    <h1 class="font-heading text-3xl font-bold mb-8">Datenschutzerklärung</h1>
-    <p class="mb-6"><strong>Verantwortlicher im Sinne der Datenschutzgesetze:</strong> Anne Birkenbeul, Carlsberg (67316)</p>
-
-    <h2 class="font-heading text-xl font-semibold mt-6 mb-3">1. Allgemeines</h2>
-    <p class="mb-4">Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzerklärung informiert Sie darüber, welche Daten wir erheben, wie wir sie verwenden und welche Rechte Sie in Bezug auf Ihre Daten haben.</p>
-
-    <h2 class="font-heading text-xl font-semibold mt-6 mb-3">2. Erhebung und Speicherung personenbezogener Daten</h2>
-    <h3 class="font-semibold mt-3 mb-2">a) Daten, die Sie uns aktiv mitteilen:</h3>
-    <ul class="list-disc pl-6 mb-3"><li>Kontaktdaten (Name, E-Mail-Adresse, Telefonnummer, Adresse) bei Anmeldungen, Anfragen oder Buchungen.</li><li>Zahlungsdaten (z. B. Bankverbindung bei Überweisungen).</li><li>Gesundheitsdaten (freiwillige Angaben zu Allergien oder Einschränkungen, soweit für die Teilnahme relevant).</li></ul>
-    <h3 class="font-semibold mt-3 mb-2">b) Automatisch erhobene Daten:</h3>
-    <ul class="list-disc pl-6 mb-3"><li>Technische Daten (IP-Adresse, Browser-Typ, Betriebssystem, Zugriffszeiten) beim Besuch der Website.</li></ul>
-    <h3 class="font-semibold mt-3 mb-2">c) Rechtsgrundlage:</h3>
-    <p class="mb-4">Die Verarbeitung erfolgt auf Basis von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung), lit. a DSGVO (Einwilligung) oder lit. f DSGVO (berechtigtes Interesse).</p>
-
-    <h2 class="font-heading text-xl font-semibold mt-6 mb-3">3. Nutzung der Website und Cookies</h2>
-    <p class="mb-4">Wir setzen technisch notwendige Cookies ein. Tracking-Cookies werden nur nach Ihrer Einwilligung verwendet.</p>
-
-    <h2 class="font-heading text-xl font-semibold mt-6 mb-3">4. Zwecke der Datenverarbeitung</h2>
-    <ul class="list-disc pl-6 mb-4"><li>Buchungen und Anmeldungen</li><li>Marketing (nur mit ausdrücklicher Einwilligung)</li><li>Sicherheit</li></ul>
-
-    <h2 class="font-heading text-xl font-semibold mt-6 mb-3">5. Ihre Rechte</h2>
-    <p class="mb-4">Sie haben Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gemäß DSGVO.</p>
-
-    <h2 class="font-heading text-xl font-semibold mt-6 mb-3">6. Datensicherheit</h2>
-    <p class="mb-4">Wir setzen technische und organisatorische Maßnahmen (z. B. SSL-Verschlüsselung) ein, um Ihre Daten zu schützen.</p>
-
-    <p class="text-sm text-[#5a6e5c] mt-8">Stand: Februar 2026</p>
-  </main>
-
-  <footer class="bg-[#5c5a4e] text-white py-12 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div><div class="flex items-center gap-2 mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg><span class="font-heading text-xl">Birkenpfade</span></div><p class="text-sm opacity-80">Natur – Verbindung – Sein</p></div>
-      <div><h3 class="font-heading text-lg font-semibold mb-4">Kontakt</h3><p>📞 0176 48 98 05 65<br>✉️ info@birkenpfade.de</p></div>
-      <div><h3 class="font-heading text-lg font-semibold mb-4">Rechtliches</h3><p><a href="impressum.html" class="hover:underline">Impressum</a><br><a href="datenschutz.html" class="hover:underline">Datenschutz</a><br><a href="agb.html" class="hover:underline">AGB</a><br><a href="wichtige-hinweise.html" class="hover:underline">Wichtige Hinweise</a></p></div>
+    <div>
+      <h3 class="font-heading text-lg font-semibold mb-4">Kontakt</h3>
+      <p>📞 0176 48 98 05 65<br>✉️ info@birkenpfade.de</p>
     </div>
-    <div class="text-center text-xs opacity-60 mt-8">© 2026 Birkenpfade – Anne Birkenbeul</div>
-  </footer>
+    <div>
+      <h3 class="font-heading text-lg font-semibold mb-4">Rechtliches</h3>
+      <p><a href="impressum.html" class="hover:underline">Impressum</a><br><a href="datenschutz.html" class="hover:underline">Datenschutz</a><br><a href="agb.html" class="hover:underline">AGB</a><br><a href="wichtige-hinweise.html" class="hover:underline">Wichtige Hinweise</a></p>
+    </div>
+  </div>
+  <div class="text-center text-xs opacity-60 mt-8">© 2026 Birkenpfade – Anne Birkenbeul</div>
+</footer>
 
-  <script>document.getElementById('menuBtn').onclick = function() { var m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); }</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+  document.getElementById('menuBtn').onclick = function() { var m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); }
+</script>
 </body>
 </html>
