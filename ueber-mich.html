@@ -4,41 +4,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Über mich | Birkenpfade</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background-color: #faf7f0; color: #1f2e26; font-family: 'Inter', sans-serif; }
-    h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Playfair Display', serif; }
-    .text-primary { color: #2d5e2b !important; }
-    .bg-primary\/10 { background-color: rgba(45, 94, 43, 0.1); }
-    .bg-card { background-color: #f5f1e9; }
-    .border-border { border-color: #dad3c2; }
+    :root {
+      --background: 40 30% 97%;
+      --foreground: 150 20% 15%;
+      --primary: 145 35% 28%;
+      --primary-foreground: 40 30% 97%;
+      --card: 40 25% 95%;
+      --border: 80 15% 82%;
+      --muted: 80 15% 90%;
+      --muted-foreground: 150 10% 40%;
+      --secondary: 30 30% 35%;
+      --secondary-foreground: 40 30% 97%;
+      --radius: 0.5rem;
+    }
+    
+    body {
+      background-color: hsl(var(--background));
+      color: hsl(var(--foreground));
+      font-family: 'Inter', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .bg-background { background-color: hsl(var(--background)); }
+    .bg-card { background-color: hsl(var(--card)); }
+    .bg-primary { background-color: hsl(var(--primary)); }
+    .bg-primary\/10 { background-color: hsl(var(--primary) / 0.1); }
+    .bg-muted { background-color: hsl(var(--muted)); }
+    .bg-secondary { background-color: hsl(var(--secondary)); }
+    .text-primary { color: hsl(var(--primary)); }
+    .text-foreground { color: hsl(var(--foreground)); }
+    .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+    .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+    .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
+    .border-border { border-color: hsl(var(--border)); }
+    .hover\:bg-primary\/90:hover { background-color: hsl(var(--primary) / 0.9); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .rounded-xl { border-radius: var(--radius); }
+    .rounded-md { border-radius: calc(var(--radius) - 0.25rem); }
+    .clear-both { clear: both; }
   </style>
 </head>
 <body>
 
-  <nav class="sticky top-0 z-50 bg-[#faf7f0]/95 backdrop-blur-sm border-b border-[#dad3c2]">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d5e2b" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg>
-        <div><span class="font-heading text-xl font-bold text-[#2d5e2b]">Birkenpfade</span><span class="block text-xs text-[#5a6e5c]">Natur – Verbindung – Sein</span></div>
-      </a>
-      <div class="hidden lg:flex items-center gap-1">
-        <a href="index.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Startseite</a>
-        <a href="angebote.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Angebote</a>
-        <a href="birkenpfade.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Birkenpfade</a>
-        <a href="ueber-mich.html" class="px-3 py-2 text-sm font-medium text-[#2d5e2b] bg-[#2d5e2b]/10 rounded-md">Über mich</a>
-        <a href="mehrwert-naturzeit.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Mehrwert Naturzeit</a>
-        <a href="termine.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Termine</a>
-        <a href="blog.html" class="px-3 py-2 text-sm font-medium text-[#1f2e26]/70 hover:text-[#2d5e2b]">Blog</a>
-        <a href="kontakt.html" class="ml-2 bg-[#2d5e2b] text-white text-sm font-medium px-4 py-2 rounded-md">Jetzt anfragen</a>
+<nav class="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <i data-lucide="tree-pine" class="w-7 h-7" style="stroke: #2d5e2b; stroke-width: 1.8;"></i>
+      <div>
+        <span class="font-heading text-xl font-bold text-primary">Birkenpfade</span>
+        <span class="block text-xs text-muted-foreground">Natur – Verbindung – Sein</span>
       </div>
-      <button id="menuBtn" class="lg:hidden p-2"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+    </a>
+    <div class="hidden lg:flex items-center gap-1">
+      <a href="index.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Startseite</a>
+      <a href="angebote.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Angebote</a>
+      <a href="birkenpfade.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Birkenpfade</a>
+      <a href="ueber-mich.html" class="px-3 py-2 text-sm font-medium text-primary bg-primary/10 rounded-md">Über mich</a>
+      <a href="mehrwert-naturzeit.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Mehrwert Naturzeit</a>
+      <a href="termine.html" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Termine</a>
+      <a href="./blog/" class="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary">Blog</a>
+      <a href="kontakt.html" class="ml-2 bg-primary text-primary-foreground text-sm font-medium px-4 py-2 rounded-md hover:bg-primary/90">Jetzt anfragen</a>
     </div>
-    <div id="mobileMenu" class="lg:hidden hidden bg-[#faf7f0] border-t px-4 py-4 space-y-2">
-      <a href="index.html" class="block px-3 py-2">Startseite</a><a href="angebote.html" class="block px-3 py-2">Angebote</a><a href="birkenpfade.html" class="block px-3 py-2">Birkenpfade</a><a href="ueber-mich.html" class="block px-3 py-2 text-[#2d5e2b]">Über mich</a><a href="mehrwert-naturzeit.html" class="block px-3 py-2">Mehrwert Naturzeit</a><a href="termine.html" class="block px-3 py-2">Termine</a><a href="blog.html" class="block px-3 py-2">Blog</a><a href="kontakt.html" class="block mt-2 bg-[#2d5e2b] text-white text-center px-4 py-2 rounded-md">Jetzt anfragen</a>
-    </div>
-  </nav>
+    <button id="menuBtn" class="lg:hidden p-2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="lg:hidden hidden bg-background border-t border-border px-4 py-4 space-y-2">
+    <a href="index.html" class="block px-3 py-2">Startseite</a>
+    <a href="angebote.html" class="block px-3 py-2">Angebote</a>
+    <a href="birkenpfade.html" class="block px-3 py-2">Birkenpfade</a>
+    <a href="ueber-mich.html" class="block px-3 py-2 text-primary">Über mich</a>
+    <a href="mehrwert-naturzeit.html" class="block px-3 py-2">Mehrwert Naturzeit</a>
+    <a href="termine.html" class="block px-3 py-2">Termine</a>
+    <a href="./blog/" class="block px-3 py-2">Blog</a>
+    <a href="kontakt.html" class="block mt-2 bg-primary text-primary-foreground text-center px-4 py-2 rounded-md">Jetzt anfragen</a>
+  </div>
+</nav>
 
   <main class="py-12 px-4 max-w-4xl mx-auto">
     <h1 class="font-heading text-4xl md:text-5xl font-bold text-center mb-10">Über mich</h1>
@@ -47,48 +94,75 @@
       <img src="images/f145a4434_DSC_0132.jpg" alt="Anne Birkenbeul im Wald" class="float-left mr-6 mb-4 rounded-xl shadow-md w-80 object-cover">
       <div class="space-y-4 leading-relaxed">
         <p>Ich bin in einem kleinen Dorf im Westerwald aufgewachsen und habe schon als Kind Wald und Wiesen erkundet.</p>
-        <p>Über 15 Jahre lang hab ich Kinder im Alter von 1–10 Jahren auf ihrem Weg in Krippe, Kita und Hort als Kindergärtnerin begleitet.</p>
-        <p>Ich absolvierte Weiterbildungen als Naturerlebnis- und Waldbadepädagogin bei CreNatur und besuchte weitere Seminare und Fortbildungen im Bereich Naturcoaching, Energiearbeit, (Heil)Pflanzen- und Pilzkunde. Es macht mir Freude mich beruflich und persönlich weiterzuentwickeln und Neues zu lernen.</p>
-        <p>In den letzten 11 Jahren durfte ich viele wichtige und wertvolle Erfahrungen sammeln und Menschen kennen lernen, die mir die „richtigen" Fragen stellten und Impulse gaben. Ich lernte wie wichtig das Innehalten und Reflektieren, sowie Alltags-Rituale sind. Ich erfuhr die heilsame Wirkung von Stille und Natur. Ich vertiefte mein Naturwissen und befasste mich mit unterschiedlichen Inhalten für ein gesundes und glückliches Leben. Aufgrund dessen veränderte ich meinen Lebensstil, im Laufe der Jahre, grundlegend.</p>
+        <p>Über 15 Jahre lang habe ich Kinder im Alter von 1–10 Jahren auf ihrem Weg in Krippe, Kita und Hort als Kindergärtnerin begleitet.</p>
+        <p>Ich absolvierte Weiterbildungen als Naturerlebnis- und Waldbadepädagogin bei CreNatur und besuchte weitere Seminare und Fortbildungen im Bereich (Natur)coaching, (Heil)Pflanzen- und Pilzkunde. Es macht mir Freude mich beruflich und persönlich weiterzuentwickeln und Neues zu lernen.</p>
+        <p>In den letzten 11 Jahren durfte ich viele wertvolle Erfahrungen sammeln und Menschen kennen lernen, die mir die „richtigen" Fragen stellten und Impulse gaben.</p>
+        <p>Ich erlebte wie wichtig das Innehalten und Reflektieren ist und lernte Alltagsrituale zu schätzen. Ich erfuhr die heilsame Wirkung von Stille und Natur. Ich vertiefte mein Naturwissen und befasste mich mit unterschiedlichen Inhalten für ein gesundes und glückliches Leben. Aufgrund dessen veränderte ich meinen Lebensstil im Laufe der Jahre grundlegend.</p>
         <p>Ich möchte mein bisheriges Wissen und meine Erfahrung nun vor allem mit Erwachsenen teilen, die sich eine erholsame Zeit in der Natur wünschen und offen sind für bereichernde Impulse, Reflexion und Neuausrichtung.</p>
         <p class="font-semibold">Anne Birkenbeul</p>
       </div>
       <div class="clear-both"></div>
     </div>
 
-    <div class="mt-10 bg-[#2d5e2b]/10 rounded-xl p-8">
+    <div class="mt-10 bg-primary/10 rounded-xl p-8">
       <h2 class="font-heading text-2xl font-bold mb-4">Meine Motivation</h2>
-      <p class="leading-relaxed">Meine Motivation ist es, den Menschen wieder mit sich und der Natur zu verbinden, ihm erholsame und inspirierende (Natur-) Erfahrungen zu ermöglichen und ihn mit seinem Selbst zu verbinden.</p>
+      <p class="leading-relaxed">Meine Motivation ist es, den Menschen wieder mit sich und der Natur zu verbinden und ihm erholsame und inspirierende (Natur-) Erfahrungen zu ermöglichen.</p>
     </div>
 
     <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-8">
-        <h3 class="font-heading text-xl font-bold mb-4 text-[#2d5e2b]">ANNE</h3>
-        <div class="space-y-2"><p><span class="font-bold text-[#2d5e2b] text-lg">A</span> uthentisch</p><p><span class="font-bold text-[#2d5e2b] text-lg">N</span> aturverbunden</p><p><span class="font-bold text-[#2d5e2b] text-lg">N</span> eugierig</p><p><span class="font-bold text-[#2d5e2b] text-lg">E</span> mpathisch</p></div>
+      <div class="bg-card border border-border rounded-xl p-8">
+        <h3 class="font-heading text-xl font-bold mb-4 text-primary">Meine Eigenschaften</h3>
+        <div class="space-y-2">
+          <p><span class="font-bold text-primary text-lg">A</span> uthentisch</p>
+          <p><span class="font-bold text-primary text-lg">N</span> aturverbunden</p>
+          <p><span class="font-bold text-primary text-lg">N</span> eugierig</p>
+          <p><span class="font-bold text-primary text-lg">E</span> mpathisch</p>
+        </div>
       </div>
-      <div class="bg-[#f5f1e9] border border-[#dad3c2] rounded-xl p-8">
+      <div class="bg-card border border-border rounded-xl p-8">
         <h3 class="font-heading text-xl font-bold mb-4">Meine Angebote beinhalten im Kern:</h3>
-        <ul class="space-y-2"><li>• Entspannung und Erholung <span class="text-sm text-[#5a6e5c]">(→ Waldbaden)</span></li><li>• Aktivität und Freude <span class="text-sm text-[#5a6e5c]">(→ Naturerlebnis)</span></li><li>• Reflexion und Impulse für dein Leben <span class="text-sm text-[#5a6e5c]">(→ Naturcoaching)</span></li><li>• Individuelle Begleitung <span class="text-sm text-[#5a6e5c]">(→ Gehör-Gang, Alltags-Kompass)</span></li></ul>
+        <ul class="space-y-2">
+          <li>• Entspannung und Erholung <span class="text-sm text-muted-foreground">(→ <a href="angebote.html#waldbaden" class="text-primary hover:underline">Waldbaden</a>)</span></li>
+          <li>• Aktivität und Freude <span class="text-sm text-muted-foreground">(→ <a href="angebote.html#naturerlebnis" class="text-primary hover:underline">Naturerlebnis</a>)</span></li>
+          <li>• Reflexion und Impulse für dein Leben <span class="text-sm text-muted-foreground">(→ <a href="angebote.html#naturcoaching" class="text-primary hover:underline">Naturcoaching</a>)</span></li>
+          <li>• Individuelle Begleitung <span class="text-sm text-muted-foreground">(→ Gehör-Gang, Alltags-Kompass)</span></li>
+        </ul>
       </div>
     </div>
 
     <div class="mt-8 text-center">
-      <p class="mb-4">Schau gerne bei meinen <a href="angebote.html" class="text-[#2d5e2b] font-semibold hover:underline">Angeboten</a> vorbei, welches gerade für dich am besten passt.</p>
+      <p class="mb-4">Schau gerne bei meinen <a href="angebote.html" class="text-primary font-semibold hover:underline">Angeboten</a> vorbei, welches gerade für dich am besten passt.</p>
       <p class="mb-6">Ich freue mich darauf dich bald persönlich kennen zu lernen!</p>
       <p>Herzliche Grüße</p>
       <p class="font-heading text-lg font-semibold mt-2">Anne Birkenbeul</p>
     </div>
   </main>
 
-  <footer class="bg-[#5c5a4e] text-white py-12 px-4">
+  <footer class="bg-secondary text-secondary-foreground py-12 px-4">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div><div class="flex items-center gap-2 mb-4"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="m17 14 3-3-3-3"/><path d="M7 14 4 11l3-3"/><path d="M12 2v20"/></svg><span class="font-heading text-xl">Birkenpfade</span></div><p class="text-sm opacity-80">Natur – Verbindung – Sein</p></div>
-      <div><h3 class="font-heading text-lg font-semibold mb-4">Kontakt</h3><p>📞 0176 48 98 05 65<br>✉️ info@birkenpfade.de<br>📍 Pfälzerwald bei Carlsberg (67316)</p></div>
-      <div><h3 class="font-heading text-lg font-semibold mb-4">Rechtliches</h3><p><a href="impressum.html" class="hover:underline">Impressum</a><br><a href="datenschutz.html" class="hover:underline">Datenschutz</a><br><a href="agb.html" class="hover:underline">AGB</a><br><a href="wichtige-hinweise.html" class="hover:underline">Wichtige Hinweise</a><br><a href="teilnehmerstimmen.html" class="hover:underline">Teilnehmerstimmen</a></p></div>
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <i data-lucide="tree-pine" class="w-6 h-6" style="stroke: white; stroke-width: 1.8;"></i>
+          <span class="font-heading text-xl">Birkenpfade</span>
+        </div>
+        <p class="text-sm opacity-80">Natur – Verbindung – Sein</p>
+      </div>
+      <div>
+        <h3 class="font-heading text-lg font-semibold mb-4">Kontakt</h3>
+        <p>📞 0176 48 98 05 65<br>✉️ info@birkenpfade.de<br>📍 Pfälzerwald bei Carlsberg (67316)</p>
+      </div>
+      <div>
+        <h3 class="font-heading text-lg font-semibold mb-4">Rechtliches</h3>
+        <p><a href="impressum.html" class="hover:underline">Impressum</a><br><a href="datenschutz.html" class="hover:underline">Datenschutz</a><br><a href="agb.html" class="hover:underline">AGB</a><br><a href="wichtige-hinweise.html" class="hover:underline">Wichtige Hinweise</a><br><a href="teilnehmerstimmen.html" class="hover:underline">Teilnehmerstimmen</a></p>
+      </div>
     </div>
     <div class="text-center text-xs opacity-60 mt-8">© 2026 Birkenpfade – Anne Birkenbeul</div>
   </footer>
 
-  <script>document.getElementById('menuBtn').onclick = function() { var m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); }</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+    document.getElementById('menuBtn').onclick = function() { var m = document.getElementById('mobileMenu'); m.classList.toggle('hidden'); }
+  </script>
 </body>
 </html>
